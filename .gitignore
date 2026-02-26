@@ -1,0 +1,26 @@
+# Исполняемые файлы
+*.exe
+*.out
+pthreads
+basic
+sse
+sequential
+clean_pthreads
+clean_basic
+
+# Объектные файлы
+*.o
+*.obj
+
+# Временные файлы
+*~
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+
+# ОС
+.DS_Store
+Thumbs.db
