@@ -45,17 +45,17 @@ mkdir C:\tmp
 
 Окно 1 (writer source=0):
 ```bat
-"C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin\java.exe" -cp ".;mappedbus.jar" io.mappedbus.sample.object.ObjectWriter 0
+run-writer-0.bat
 ```
 
 Окно 2 (writer source=1):
 ```bat
-"C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin\java.exe" -cp ".;mappedbus.jar" io.mappedbus.sample.object.ObjectWriter 1
+run-writer-1.bat
 ```
 
 Окно 3 (reader):
 ```bat
-"C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin\java.exe" -cp ".;mappedbus.jar" io.mappedbus.sample.object.ObjectReader
+run-reader.bat
 ```
 
 Ожидаемый формат в reader:
@@ -64,12 +64,12 @@ Read: PriceUpdate [source=0, price=20, quantity=40], hasRecovered=true
 Read: PriceUpdate [source=1, price=8, quantity=16], hasRecovered=true
 ```
 
-## Если хотите запускать без bat
+## Пример ручного запуска (без точного пути)
 
 ```bat
-"C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin\java.exe" -cp ".;mappedbus.jar" io.mappedbus.sample.object.ObjectWriter 0
-"C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin\java.exe" -cp ".;mappedbus.jar" io.mappedbus.sample.object.ObjectWriter 1
-"C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin\java.exe" -cp ".;mappedbus.jar" io.mappedbus.sample.object.ObjectReader
+java -cp ".;mappedbus.jar" io.mappedbus.sample.object.ObjectWriter 0
+java -cp ".;mappedbus.jar" io.mappedbus.sample.object.ObjectWriter 1
+java -cp ".;mappedbus.jar" io.mappedbus.sample.object.ObjectReader
 ```
 
 ## Кратко: как работает object sample
