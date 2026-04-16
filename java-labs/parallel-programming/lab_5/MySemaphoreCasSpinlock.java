@@ -18,7 +18,7 @@ public class MySemaphoreCasSpinlock extends Semaphore {
         while (true) {
             int current = permits.get();
             if (current == 0) {
-                Thread.yield(); // ждём, пока появится разрешение
+                Thread.onSpinWait(); // ждём, пока появится разрешение
                 continue;
             }
             if (permits.compareAndSet(current, current - 1)) {
@@ -31,12 +31,7 @@ public class MySemaphoreCasSpinlock extends Semaphore {
     @Override
     public void release() {
         // ToDo: написать код
-        while (true) {
-            int current = permits.get();
-            if (permits.compareAndSet(current, current + 1)) {
-                break;
-            }
-        }
+        permits.incrementAndGet();
     }
 
     @Override

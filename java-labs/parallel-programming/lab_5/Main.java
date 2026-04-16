@@ -14,10 +14,12 @@ public class Main {
     public static Semaphore regularSemaphore = new Semaphore(COUNT);
 
     public static void main(String[] args) {
-        System.out.println("-------------------\nRegular semaphore:\n-------------------");
-        runTask(regularSemaphore);
-        System.out.println("--------------\nMy semaphore LockCondition:\n--------------");
-        runTask(mySemaphore1);
+        // System.out.println("-------------------\nRegular
+        // semaphore:\n-------------------");
+        // runTask(regularSemaphore);
+        // System.out.println("--------------\nMy semaphore
+        // LockCondition:\n--------------");
+        // runTask(mySemaphore1);
         System.out.println("--------------\nMy semaphore CasSpinlock:\n--------------");
         runTask(mySemaphore2);
     }

@@ -1,12 +1,14 @@
 # Исполняемые файлы
 *.exe
 *.out
+*.class
 pthreads
 basic
 sse
 sequential
 clean_pthreads
 clean_basic
+Mappedbus/
 
 # Объектные файлы
 *.o
